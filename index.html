@@ -2,48 +2,46 @@
 <html lang="en">
 
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Website title -->
     <title>Travel Recommendation</title>
-
-    <!-- Connect CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ==================== NAVIGATION BAR ==================== -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
 
-        <!-- Website logo -->
-        <div class="logo">
-            Travel Recommendation
-        </div>
+        <div class="logo">Travel Recommendation</div>
 
-        <!-- Navigation links -->
         <ul class="nav-links">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="about.html">About Us</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact Us</a>
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
+
+        <!-- Search Area -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search destinations"
+            >
+
+            <button type="button" id="searchButton">
+                Search
+            </button>
+
+            <button type="button" id="clearButton">
+                Clear
+            </button>
+        </div>
 
     </nav>
 
 
-    <!-- ==================== HOME INTRODUCTION ==================== -->
+    <!-- Home Introduction -->
     <section class="hero">
 
         <div class="hero-content">
@@ -65,7 +63,7 @@
     </section>
 
 
-    <!-- ==================== BEACH RECOMMENDATIONS ==================== -->
+    <!-- Beach Recommendations -->
     <section class="recommendation">
 
         <h2>Beach Recommendations</h2>
@@ -76,7 +74,6 @@
 
         <div class="cards">
 
-            <!-- Beach 1 -->
             <div class="card">
 
                 <img
@@ -94,12 +91,11 @@
             </div>
 
 
-            <!-- Beach 2 -->
             <div class="card">
 
                 <img
                     src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda"
-                    alt="Beautiful beach"
+                    alt="Beautiful paradise beach"
                 >
 
                 <h3>Paradise Beach</h3>
@@ -116,7 +112,7 @@
     </section>
 
 
-    <!-- ==================== TEMPLE RECOMMENDATIONS ==================== -->
+    <!-- Temple Recommendations -->
     <section class="recommendation">
 
         <h2>Temple Recommendations</h2>
@@ -127,7 +123,6 @@
 
         <div class="cards">
 
-            <!-- Temple 1 -->
             <div class="card">
 
                 <img
@@ -138,14 +133,13 @@
                 <h3>Japanese Temple</h3>
 
                 <p>
-                    Experience the peaceful atmosphere
-                    and traditional architecture of Japan.
+                    Experience the peaceful atmosphere and
+                    traditional architecture of Japan.
                 </p>
 
             </div>
 
 
-            <!-- Temple 2 -->
             <div class="card">
 
                 <img
@@ -156,8 +150,8 @@
                 <h3>Indian Temple</h3>
 
                 <p>
-                    Discover beautiful architecture,
-                    history, and cultural traditions.
+                    Discover beautiful architecture, history,
+                    and cultural traditions.
                 </p>
 
             </div>
@@ -167,7 +161,7 @@
     </section>
 
 
-    <!-- ==================== COUNTRY RECOMMENDATIONS ==================== -->
+    <!-- Country Recommendations -->
     <section class="recommendation">
 
         <h2>Country Recommendations</h2>
@@ -178,7 +172,6 @@
 
         <div class="cards">
 
-            <!-- India -->
             <div class="card">
 
                 <img
@@ -196,7 +189,6 @@
             </div>
 
 
-            <!-- France -->
             <div class="card">
 
                 <img
@@ -214,7 +206,6 @@
             </div>
 
 
-            <!-- Japan -->
             <div class="card">
 
                 <img
@@ -225,8 +216,8 @@
                 <h3>Japan</h3>
 
                 <p>
-                    Explore Japan's modern cities,
-                    traditional culture, temples, and nature.
+                    Explore Japan's modern cities, traditional culture,
+                    temples, and nature.
                 </p>
 
             </div>
@@ -236,7 +227,7 @@
     </section>
 
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Footer -->
     <footer>
 
         <p>
@@ -245,7 +236,65 @@
 
     </footer>
 
+
+    <!-- Search Functionality -->
+    <script>
+
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const clearButton = document.getElementById("clearButton");
+
+        const recommendationSections =
+            document.querySelectorAll(".recommendation");
+
+
+        // Search Button
+        searchButton.addEventListener("click", function () {
+
+            const searchTerm =
+                searchInput.value.toLowerCase().trim();
+
+
+            recommendationSections.forEach(function (section) {
+
+                const sectionText =
+                    section.innerText.toLowerCase();
+
+
+                if (
+                    searchTerm === "" ||
+                    sectionText.includes(searchTerm)
+                ) {
+
+                    section.style.display = "block";
+
+                } else {
+
+                    section.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+        // Clear Button
+        clearButton.addEventListener("click", function () {
+
+            searchInput.value = "";
+
+
+            recommendationSections.forEach(function (section) {
+
+                section.style.display = "block";
+
+            });
+
+        });
+
+    </script>
+
 </body>
 
 </html>
-```

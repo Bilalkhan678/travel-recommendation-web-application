@@ -1,13 +1,9 @@
-/* ==================== GENERAL STYLING ==================== */
-
-/* Remove default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -15,317 +11,274 @@ body {
     color: #333;
 }
 
-
-/* ==================== NAVIGATION BAR ==================== */
-
+/* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 15px 40px;
-
     background-color: #1b5e20;
+    gap: 20px;
 }
 
-/* Website logo */
 .logo {
     color: white;
     font-size: 22px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
-/* Navigation list */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 25px;
 }
 
-/* Navigation links */
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Navigation hover effect */
 .nav-links a:hover {
     color: #c8e6c9;
 }
 
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-/* ==================== HOME HERO SECTION ==================== */
+.search-box input {
+    padding: 10px;
+    width: 190px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
 
+.search-box button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #1b5e20;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #c8e6c9;
+}
+
+/* Hero Section */
 .hero {
     min-height: 400px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     padding: 40px;
 
     background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)
-        ),
+        linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
         url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
 
     background-size: cover;
     background-position: center;
-
     color: white;
 }
 
-/* Hero content */
 .hero-content {
     max-width: 700px;
 }
 
-/* Hero heading */
 .hero h1 {
     font-size: 50px;
     margin-bottom: 20px;
 }
 
-/* Hero paragraphs */
 .hero p {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-
-/* ==================== RECOMMENDATION SECTIONS ==================== */
-
+/* Recommendation Sections */
 .recommendation {
     padding: 50px 8%;
     text-align: center;
 }
 
-/* Section heading */
 .recommendation h2 {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-/* Section paragraph */
 .recommendation > p {
     margin-bottom: 30px;
 }
 
-
-/* ==================== CARDS ==================== */
-
+/* Cards */
 .cards {
     display: flex;
     justify-content: center;
     gap: 30px;
-
     flex-wrap: wrap;
 }
 
-/* Individual card */
 .card {
     width: 350px;
-
     background-color: white;
-
     border-radius: 10px;
-
     overflow: hidden;
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
     text-align: left;
 }
 
-/* Card image */
 .card img {
     width: 100%;
     height: 220px;
-
     object-fit: cover;
 }
 
-/* Card heading */
 .card h3 {
     padding: 15px 20px 5px;
 }
 
-/* Card paragraph */
 .card p {
     padding: 0 20px 20px;
 }
 
-
-/* ==================== ABOUT PAGE ==================== */
-
+/* About Page */
 .about-container {
     max-width: 900px;
-
     margin: 50px auto;
-
     padding: 20px;
-
     background-color: white;
-
     border-radius: 10px;
 }
 
-/* About main heading */
 .about-container h1 {
     text-align: center;
-
     margin-bottom: 25px;
-
     font-size: 40px;
 }
 
-/* About sections */
 .about-section {
     margin-top: 30px;
 }
 
-/* About section heading */
 .about-section h2 {
     margin-bottom: 10px;
 }
 
-/* About list */
 .about-section ul {
     padding-left: 25px;
 }
 
-
-/* ==================== CONTACT PAGE ==================== */
-
+/* Contact Page */
 .contact-container {
     max-width: 700px;
-
     margin: 50px auto;
-
     padding: 30px;
-
     background-color: white;
-
     border-radius: 10px;
 }
 
-/* Contact heading */
 .contact-container h1 {
     text-align: center;
-
     margin-bottom: 15px;
 }
 
-/* Contact description */
 .contact-container > p {
     text-align: center;
-
     margin-bottom: 30px;
 }
 
-
-/* ==================== CONTACT FORM ==================== */
-
 .contact-form {
     display: flex;
-
     flex-direction: column;
 }
 
-/* Form labels */
 .contact-form label {
     margin-bottom: 5px;
-
     font-weight: bold;
 }
 
-/* Inputs and textarea */
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-
     margin-bottom: 20px;
-
     border: 1px solid #ccc;
-
     border-radius: 5px;
-
     font-size: 16px;
 }
 
-/* Submit button */
 .contact-form button {
     padding: 12px;
-
     border: none;
-
     border-radius: 5px;
-
     background-color: #1b5e20;
-
     color: white;
-
     font-size: 16px;
-
     cursor: pointer;
 }
 
-/* Button hover */
 .contact-form button:hover {
     background-color: #2e7d32;
 }
 
-
-/* ==================== FOOTER ==================== */
-
+/* Footer */
 footer {
     text-align: center;
-
     padding: 20px;
-
     margin-top: 30px;
-
     background-color: #1b5e20;
-
     color: white;
 }
 
+/* Responsive Design */
+@media (max-width: 1000px) {
 
-/* ==================== RESPONSIVE DESIGN ==================== */
-
-/* For smaller screens */
-@media (max-width: 768px) {
-
-    /* Stack navbar items */
     .navbar {
         flex-direction: column;
-
         gap: 15px;
     }
 
-    /* Stack navigation links */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-box {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
     .nav-links {
         flex-direction: column;
-
         text-align: center;
-
         gap: 10px;
     }
 
-    /* Smaller hero heading */
+    .search-box {
+        flex-wrap: wrap;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
     .hero h1 {
         font-size: 36px;
     }
 
-    /* Cards use smaller width */
     .card {
         width: 100%;
     }
-
 }
